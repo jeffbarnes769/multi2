@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: main
+spec:
+  containers:
+   - name: main
+     image: jeffbarnes/main:v0
+     ports:
+      - containerPort: 8500
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main
+spec:
+ selector:
+    matchLabels:
+      app: main
+ replicas: 3
+ template:
+    metadata:
+     labels:
+      app: main
+    spec:
+     containers:
+     - name: main
+       image: jeffbarnes/main:v0
+       ports:
+        - containerPort: 8500
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: main
+spec:
+  type: LoadBalancer
+  selector:
+    app: main
+  ports:
+  - protocol: TCP
+    port: 8500
+    targetPort: 8500
