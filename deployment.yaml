@@ -28,16 +28,3 @@ spec:
        image: jeffbarnes/main:v0
        ports:
         - containerPort: 8500
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: main
-spec:
-  type: LoadBalancer
-  selector:
-    app: main
-  ports:
-  - protocol: TCP
-    port: 8500
-    targetPort: 8500
