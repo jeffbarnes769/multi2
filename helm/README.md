@@ -13,14 +13,15 @@ main </br>
 │   ├── NOTES.txt </br>
 │   └── service.yaml </br>
 └── values.yaml</br>
-
-**From the git source directory**
-
+```
+**From the git source directory** </br>
+We used service.yaml and deployment.yaml from previous builds 
+```
 $ cp deployment.yaml ../main/templates </br>
 $ cp service.yaml ../main/templates </br>
-
+```
 **Install the Chart**
-
+```
 $ helm install --name main /home/(user)/main </br>
 
 NAME:   main </br>
@@ -46,9 +47,9 @@ NAME  AGE </br>
 main  1s </br>
 ==> v1/Pod </br>
 main  0s </br>
-
+```
 **Notes (Modified from the output):**</br>
-
+```
 $ export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services main)</br>
 $ export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")</br>
 $ echo http://$NODE_IP:$NODE_PORT/</br>
