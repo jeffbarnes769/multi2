@@ -1,86 +1,90 @@
-** Create the Chart
+**Create the Chart
 
-$ helm create main
-$ tree main
-main
-├── charts
-├── Chart.yaml
-├── templates
-│   ├── deployment.yaml
-│   ├── _helpers.tpl
-│   ├── ingress.yaml
-│   ├── NOTES.txt
-│   └── service.yaml
-└── values.yaml
+$ helm create main </br>
+$ tree main </br>
+main </br>
+├── charts </br>
+├── Chart.yaml </br>
+├── templates </br>
+│   ├── deployment.yaml </br>
+│   ├── _helpers.tpl </br>
+│   ├── ingress.yaml </br>
+│   ├── NOTES.txt </br>
+│   └── service.yaml </br>
+└── values.yaml</br>
 
-** From the git source directory
-$ cp deployment.yaml ../main/templates
-$ cp service.yaml ../main/templates
-** Install the Chart
-$ helm install --name main /home/<user>/main
-NAME:   main
-LAST DEPLOYED: Sun Nov 25 15:11:39 2018
-NAMESPACE: default
-STATUS: DEPLOYED
+**From the git source directory
 
-RESOURCES:
-==> v1/Deployment
-NAME  AGE
-main  0s
+$ cp deployment.yaml ../main/templates </br>
+$ cp service.yaml ../main/templates </br>
 
-==> v1/Pod(related)
+**Install the Chart
 
-NAME                   READY  STATUS             RESTARTS  AGE
-main-xxxxxxxxxx-xxxxx  0/1    ContainerCreating  0         0s
-main-xxxxxxxxxx-xxxxx  0/1    Pending            0         0s
-main-xxxxxxxxxx-xxxxx  0/1    Pending            0         0s
+$ helm install --name main /home/(user)/main </br>
 
-==> v1/Service
+NAME:   main </br>
+LAST DEPLOYED: Sun Nov 25 15:11:39 2018 </br>
+NAMESPACE: default </br>
+STATUS: DEPLOYED </br>
 
-NAME  AGE
-main  1s
+RESOURCES: </br>
+==> v1/Deployment </br>
+NAME  AGE </br>
+main  0s </br>
 
-==> v1/Pod
-main  0s
-** NOTES (modified from the output):
+==> v1/Pod(related) </br>
 
-$ export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services main)
-$ export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
-$ echo http://$NODE_IP:$NODE_PORT/
-output http://X.X.X.X:12345/
+NAME                   READY  STATUS             RESTARTS  AGE </br>
+main-xxxxxxxxxx-xxxxx  0/1    ContainerCreating  0         0s </br>
+main-xxxxxxxxxx-xxxxx  0/1    Pending            0         0s </br>
+main-xxxxxxxxxx-xxxxx  0/1    Pending            0         0s </br>
 
-$ kubectl get svc
-NAME         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
-kubernetes   ClusterIP      X.X.X.X        <none>        443/TCP          95d
-main         LoadBalancer   Y.Y.Y.Y        <pending>     8500:12345/TCP   1m
-$ helm ls
-NAME    REVISION        UPDATED                         STATUS          CHART           APP VERSION     NAMESPACE
-main    1               Sun Nov 25 15:11:39 2018        DEPLOYED        main-0.1.0      1.0             default
-$ kubectl get deployment
-NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-main      3         3         3            3           7m
+==> v1/Service </br>
 
-$ helm status main
-LAST DEPLOYED: Sun Nov 25 15:11:39 2018
-NAMESPACE: default
-STATUS: DEPLOYED
+NAME  AGE </br>
+main  1s </br>
+==> v1/Pod </br>
+main  0s </br>
 
-RESOURCES:
-==> v1/Service
-NAME  AGE
-main  2h
+**Notes (Modified from the output):</br>
 
-==> v1/Pod
-main  2h
+$ export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services main)</br>
+$ export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")</br>
+$ echo http://$NODE_IP:$NODE_PORT/</br>
+output http://X.X.X.X:12345/</br>
 
-==> v1/Deployment
-main  2h
+$ kubectl get svc </br>
+NAME         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE </br>
+kubernetes   ClusterIP      X.X.X.X        <none>        443/TCP          95d </br>
+main         LoadBalancer   Y.Y.Y.Y        <pending>     8500:12345/TCP   1m  </br>
+$ helm ls </br>
+NAME    REVISION        UPDATED                         STATUS          CHART           APP VERSION     NAMESPACE </br>
+main    1               Sun Nov 25 15:11:39 2018        DEPLOYED        main-0.1.0      1.0             default   </br>
+$ kubectl get deployment </br>
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE </br>
+main      3         3         3            3           7m  </br>
 
-==> v1/Pod(related)
+$ helm status main </br>
+LAST DEPLOYED: Sun Nov 25 15:11:39 2018 </br>
+NAMESPACE: default </br>
+STATUS: DEPLOYED </br>
 
-NAME                   READY  STATUS   RESTARTS  AGE
-main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
-main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
-main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
+RESOURCES: </br>
+==> v1/Service </br>
+NAME  AGE </br>
+ main  2h </br>
 
-Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)
+==> v1/Pod </br>
+main  2h </br>
+
+==> v1/Deployment </br>
+main  2h </br>
+
+==> v1/Pod(related) </br>
+ 
+NAME                   READY  STATUS   RESTARTS  AGE</br>
+main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
+main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
+main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
+
+Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)</br>
