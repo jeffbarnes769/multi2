@@ -1,5 +1,5 @@
 **Create the Chart**
-<pre>
+
 $ helm create main </br>
 $ tree main </br>
 main </br>
@@ -88,4 +88,4 @@ main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
 
 Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)</br>
-</pre>
+
