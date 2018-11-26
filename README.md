@@ -6,7 +6,7 @@ Being new to Docker and Kubernetes, documenting some of the many steps taken on 
 
 * Deploy to Multiple platforms (public, private)
 
-* Create and Deploy a Helm Chart
+* Create and Deploy a Helm Chart [https://github.com/jeffbarnes769/multi2/blob/master/helm/README.md]
 
 Dec 20, 2017
 
