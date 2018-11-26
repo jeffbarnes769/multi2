@@ -1,4 +1,4 @@
-**Create the Chart
+**Create the Chart**
 
 $ helm create main </br>
 $ tree main </br>
@@ -13,12 +13,12 @@ main </br>
 │   └── service.yaml </br>
 └── values.yaml</br>
 
-**From the git source directory
+**From the git source directory**
 
 $ cp deployment.yaml ../main/templates </br>
 $ cp service.yaml ../main/templates </br>
 
-**Install the Chart
+**Install the Chart**
 
 $ helm install --name main /home/(user)/main </br>
 
@@ -46,7 +46,7 @@ main  1s </br>
 ==> v1/Pod </br>
 main  0s </br>
 
-**Notes (Modified from the output):</br>
+**Notes (Modified from the output):**</br>
 
 $ export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services main)</br>
 $ export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")</br>
