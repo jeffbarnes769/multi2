@@ -1,7 +1,8 @@
 **Create the Chart**
-
+```
 $ helm create main </br>
 $ tree main </br>
+
 main </br>
 ├── charts </br>
 ├── Chart.yaml </br>
@@ -86,6 +87,7 @@ NAME                   READY  STATUS   RESTARTS  AGE</br>
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h </br>
+```
 
 Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)</br>
 
