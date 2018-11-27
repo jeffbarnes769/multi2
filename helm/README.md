@@ -97,6 +97,6 @@ $ git add .
 $ git commit -m 'Helm Chart'
 $ git push
 ```
-
 Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)</br>
 https://hackernoon.com/using-a-private-github-repo-as-helm-chart-repo-https-access-95629b2af27c
+https://medium.com/google-cloud/kubernetes-and-helm-create-your-own-helm-chart-5f54aed894c2
