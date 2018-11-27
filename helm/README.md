@@ -89,6 +89,14 @@ main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 ```
+**Commit your helm chart to github**
+```
+$ helm package /home/(user)/main/ 
+$ helm repo index . 
+$ git add .
+$ git commit -m 'Helm Chart'
+$ git push
+```
 
 Thanks for the sources found in various places: helm.sh, stackoverflow (appropiate attribution underway)</br>
-
+https://hackernoon.com/using-a-private-github-repo-as-helm-chart-repo-https-access-95629b2af27c
