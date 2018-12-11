@@ -1,6 +1,6 @@
 **Learning Journey**
 
-Being new to Docker and Kubernetes, documenting some steps taken on a continuous learning journey
+Documenting steps taken on a Docker and Kubernetes continuous learning journey
 
 * Deploy simple multi-stage image to multiple platforms (public, private) 
 
