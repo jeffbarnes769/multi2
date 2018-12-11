@@ -41,4 +41,4 @@ prometheus            NodePort       A.B.C.D          <none>        9090:30003/T
 * More monitoring with Prometheus and Grafana
 
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Prometheus1.jpg" width="400">
-<img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Grafana1.jpg" width="400">
+<img src="https://github.com/jeffbarnes769/multi2/blob/master/img/grafana1.jpg" width="400">
