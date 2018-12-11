@@ -18,12 +18,10 @@ kubectl port-forward -n weave "$(kubectl get -n weave pod --selector=weave-scope
 ```
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Weavescope.jpg" width="500">
 
-Configure monitoring with Prometheus and Grafana with Brice Fernandes @fractallambda
+Configure monitoring with Prometheus and Grafana.  Thanks Brice Fernandes! @fractallambda
 * Modify https://github.com/bricef/metrics-demo/blob/master/manifests/local/monitoring.yaml and run
 ```
 kubectl apply -f <monitoring.yaml>
-```
-```
 kubectl get svc
 NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
 grafana               NodePort       A.B.C.D          <none>        3000:30002/TCP   86d
@@ -39,3 +37,8 @@ prometheus            NodePort       A.B.C.D          <none>        9090:30003/T
 
 * Import into Grafana
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/importdashboard.jpg" width="400">
+
+* More monitoring with Prometheus and Grafana
+
+<img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Prometheus1.jpg" width="400">
+<img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Grafana1.jpg" width="400">
