@@ -38,7 +38,10 @@ prometheus            NodePort       A.B.C.D          <none>        9090:30003/T
 * Import into Grafana
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/importdashboard.jpg" width="400">
 
-* More monitoring with Prometheus and Grafana
+* Kubernetes Monitoring dashboard.  Thanks again @fractallambda  
+<img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Grafana.jpg" width="600">
+
+* More monitoring with Prometheus and Grafana (w/o the dashboard)
 
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/Prometheus1.jpg" width="400">
 <img src="https://github.com/jeffbarnes769/multi2/blob/master/img/grafana1.jpg" width="400">
