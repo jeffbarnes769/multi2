@@ -28,3 +28,6 @@ spec:
        image: jeffbarnes/main:v0
        ports:
         - containerPort: 8500
+       securityContext:
+         readOnlyRootFilesystem: true
+         allowPrivilegeEscalation: false
