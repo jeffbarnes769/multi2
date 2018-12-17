@@ -3,11 +3,11 @@ entries:
   main:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-25T18:22:46.638461987-03:30
+    created: 2018-12-17T08:29:17.475364319-03:30
     description: A Helm chart for Kubernetes
-    digest: 99c134908ed7a830827143928ad0db0a3a7baadbe30df252f4f87503bbd7ee33
+    digest: fb602a7467af0d70c68c84831d4e938be1ac9754c36104f625ef2b174e1629f9
     name: main
     urls:
     - main-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-25T18:22:46.637254426-03:30
+generated: 2018-12-17T08:29:17.474039035-03:30
