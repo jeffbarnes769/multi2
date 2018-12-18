@@ -89,6 +89,15 @@ main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 ```
+Verify RO filesystem per securityContext
+
+```
+$ kubectl exec -it main-xxxxxxxxxx-xxxxx sh
+~/main $ touch file
+touch: file: Read-only file system
+~/main $
+```
+
 **Commit your helm chart to github**
 ```
 $ helm package /home/(user)/main/ 
