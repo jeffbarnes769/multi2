@@ -89,7 +89,7 @@ main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 main-xxxxxxxxxx-xxxxx  1/1    Running  0         2h 
 ```
-Verify RO filesystem per securityContext
+Verify RO filesystem per securityContext.
 
 ```
 $ kubectl exec -it main-xxxxxxxxxx-xxxxx sh
