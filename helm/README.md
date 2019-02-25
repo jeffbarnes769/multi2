@@ -15,7 +15,7 @@ main
 └── values.yaml
 ```
 **From the git source directory** </br>
-We used service.yaml and deployment.yaml from previous builds 
+We used service.yaml and deployment.yaml from previous build. 
 ```
 $ cp deployment.yaml ../main/templates 
 $ cp service.yaml ../main/templates 
