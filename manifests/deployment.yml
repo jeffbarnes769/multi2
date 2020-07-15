@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "main-2c79"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "main-2c79"
+    spec:
+      containers:
+        - name: "main-2c79"
+          image: "artio.azurecr.io/main"
+          ports:
+          - containerPort: 8500
